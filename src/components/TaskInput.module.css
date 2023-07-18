@@ -1,0 +1,39 @@
+.taskContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -1.5rem;
+}
+
+form {
+    display: flex;
+    width: 46rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+form input {
+    flex: 1;
+    height: 3rem;
+    background-color: var(--gray-500);
+    color: var(--gray-300);
+    border: 0;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border: 0;
+    border-radius: 8px;
+    width: 5.5rem;
+    height: 3rem;
+    background-color: var(--blue);
+    color: var(--gray-100);
+    font-weight: bold;
+}
+
