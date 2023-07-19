@@ -1,0 +1,55 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30rem;
+}
+
+.taskListContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+.taskHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.taskHeader div {
+    font-size: 0.875rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.taskHeader div span {
+    font-size: 0.75rem;
+    color: var(--gray-200);
+    background: var(--gray-400);
+    padding: 0.2rem 0.5rem;
+    border-radius: 35%;
+}
+
+.taskHeader div:first-child p {
+    color: var(--blue);
+}
+
+.taskHeader div:last-child p {
+    color: var(--purple);
+}
+  
+  
+
+@media screen and (max-width: 768px) {
+    .mainContainer {
+        margin: 0 1rem;
+        font-size: 0.5rem;
+    }
+}

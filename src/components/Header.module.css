@@ -1,4 +1,4 @@
-header {
+.headerContainer {
     width: 100%;
     height: 10rem;
     background-color: var(--gray-700);
@@ -11,14 +11,14 @@ header {
     align-items: center;
 }
 
-img {
+.headerContainer img {
     margin-top: 0.5rem;
 }
 
-span {
+.headerContainer span {
     color: var(--blue);
 }
 
-span:first-child {
+.headerContainer span:first-child {
     color: var(--purple);
 }

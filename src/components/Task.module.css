@@ -1,0 +1,55 @@
+.taskItemContainer {
+  display: flex;
+  margin-top: 0.75rem;
+  padding: 1rem;
+  background: var(--gray-500);
+  border-radius: 8px;
+}
+
+.taskItemContainer div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.taskItemContainer aside {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.taskItemContainer p {
+  font-size: 0.875rem;
+  color: var(--gray-100);
+}
+
+.taskItemContainer .checked {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+.taskItemContainer button {
+  background: transparent;
+  color: var(--grey-400);
+  border: 0;
+  cursor: pointer;
+  line-height: 0;
+  border-radius: 2px;
+
+  transition: color 0.2s;
+}
+
+.taskItemContainer button:hover {
+  color: var(--danger);
+}
+
+.taskItemContainer :not(:has(.checked)) img:hover {
+  filter: brightness(0.8);
+}
+
+.taskItemContainer :has(.checked) img:hover {
+  filter: brightness(1.2);
+}
