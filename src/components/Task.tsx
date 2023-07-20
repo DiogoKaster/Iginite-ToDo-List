@@ -8,9 +8,16 @@ interface TaskProps {
   id: number
   content: string
   deleteTask: (id: number) => void
+  handleChangeCheckedTasks: (id: number) => void
+  checked: boolean
 }
 
-export function Task({ id, content, deleteTask }: TaskProps) {
+export function Task({
+  id,
+  content,
+  deleteTask,
+  handleChangeCheckedTasks,
+}: TaskProps) {
   const [isChecked, setIsChecked] = useState(false)
 
   function handleCommentDelete() {
@@ -19,6 +26,7 @@ export function Task({ id, content, deleteTask }: TaskProps) {
 
   function handleCheckboxClick() {
     setIsChecked(!isChecked)
+    handleChangeCheckedTasks(id)
   }
 
   return (

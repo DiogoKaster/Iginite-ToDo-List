@@ -18,16 +18,23 @@ export function TaskInput({ createTask }: taskInputProps) {
     setNewTask(event.target.value)
   }
 
+  function handleNewTaskChangeValidity(
+    event: React.InvalidEvent<HTMLInputElement>,
+  ) {
+    event.target.setCustomValidity('Digite pelo menos 1 caractere')
+  }
+
   return (
     <div className={styles.taskInputContainer}>
       <form onSubmit={handleCreateNewTask}>
         <input
           onChange={handleNewTaskChange}
+          onInvalid={handleNewTaskChangeValidity}
           type="text"
           placeholder="Adicione uma nova tarefa"
           required
         />
-        <button type="submit">
+        <button type="submit" disabled={newTask.length === 0}>
           Criar <PlusCircle size={24} />
         </button>
       </form>

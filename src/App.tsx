@@ -10,13 +10,27 @@ function App() {
     {
       id: 1,
       content: 'Estudar React',
+      checked: false,
     },
   ])
+
+  const checkedTasks = tasks.filter((task) => task.checked)
+
+  function handleCheckboxClick(id: number) {
+    const taskIndex = tasks.findIndex((task) => task.id === id)
+
+    const newTasks = [...tasks]
+
+    newTasks[taskIndex].checked = !newTasks[taskIndex].checked
+
+    setTasks(newTasks)
+  }
 
   function createTask(task: string) {
     const newTask = {
       id: Math.random(),
       content: task,
+      checked: false,
     }
 
     setTasks([...tasks, newTask])
@@ -41,7 +55,9 @@ function App() {
             </div>
             <div>
               <p>Concluídas</p>
-              <span>2 de {tasks.length}</span>
+              <span>
+                {checkedTasks.length} de {tasks.length}
+              </span>
             </div>
           </header>
           <div className={styles.taskContent}>
@@ -51,7 +67,9 @@ function App() {
                   <Task
                     key={task.id}
                     id={task.id}
+                    checked={task.checked}
                     content={task.content}
+                    handleChangeCheckedTasks={handleCheckboxClick}
                     deleteTask={deleteTask}
                   />
                 )

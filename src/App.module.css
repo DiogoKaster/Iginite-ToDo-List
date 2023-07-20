@@ -45,8 +45,6 @@
     color: var(--purple);
 }
   
-  
-
 @media screen and (max-width: 768px) {
     .mainContainer {
         margin: 0 1rem;
